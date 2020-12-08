@@ -1,0 +1,18 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
+<> a foaf:PersonalProfileDocument ;
+   foaf:maker <#this> ;
+   foaf:primaryTopic <#this> .
+
+<#this> a foaf:Person ;
+	foaf:name "Jean Gigot";
+        cert:key [
+            a cert:RSAPublicKey;
+            rdfs:label "Made on 8 December 2020 on my desktop";
+            cert:modulus "e3cd7d132a1a07c486d63b57ac2b54dd4f6637311193b3507115307279cc4c0e4d1ca562eb92f51e2263edc4cdbd43583c9c412fe06f4b33cdd11f992b91b64389222227fdad2942c70dd914ea18df1bb9213b520353b10d3a3acdfc07ef41904adb9c9a2c28eced041906158d62523abcd7e8c28d38a20591c371768207d0485d47600dd1a338b2a8f7341e1036d9a5de9153a16690e0d4a91397e6d17ff36b15390e6e220ff67cd0be46db8e8c599076044185bcd6fb9629dbdda7ef6b1c09097db7d8d6885a30680168738a0eebc9c161d240657d9d8e0b82607fd482217102d6050741af9a6086c26af2993a4f812cd6c18cede08b70c39a971679258547"^^xsd:hexBinary;
+            cert:exponent "65537"^^xsd:nonNegativeInteger
+            ] .
